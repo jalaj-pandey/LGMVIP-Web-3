@@ -11,10 +11,7 @@ function Form(props) {
     const [agree, setAgree] = useState(false);
     const [image, setImage] = useState(null);
 
-    var loadFile = function (event) {
-        var image = document.getElementById('otp');
-        image.src = URL.createObjectURL(event.target.files[0]);
-    };
+   
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -33,6 +30,10 @@ function Form(props) {
             setImage('');
         }
     }
+    var loadFile = function (event) {
+        var image = document.getElementById('otp');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
     return (
         <div className="form">
             <div className="container my-3"><h2>Registration Form</h2></div>
